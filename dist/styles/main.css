@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+.margin-top-xxl {
+    margin-top: 10rem;
+}
+
+.margin-top-lg {
+    margin-top: 5rem;
+}
+
+.margin-top-md {
+    margin-top: 3rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+    background-image: linear-gradient(to left, rgb(0, 59, 251) 0%, rgb(0, 19, 116) 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-primary {
+    font-size: 4.8rem;
+    font-weight: 400;
+}
+
+.heading-secondary {
+    font-size: 3.2rem;
+    font-weight: 300;
+}
+
+.board {
+    background: #4f6bcc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.board__player {
+    width: 40rem;
+    padding: 5rem 0;
+}
+
+.board__player__score-overall {
+    font-size: 5rem;
+    font-weight: 500;
+    color: rgb(0, 19, 116);
+}
+
+.board__player__score-box {
+    background: linear-gradient(to left, rgb(0, 59, 251) 0%, rgb(0, 19, 116) 100%);
+    display: inline-block;
+    color: #ccc;
+    padding: 1rem 3.2rem;
+    border-radius: 10px;
+    line-height: 1.2;
+}
+
+.board__player__score-current {
+    font-size: 4rem;
+}
+
+.board-controls {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 4rem 0;
+    align-items: center;
+}
+
+.board-controls__board-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    gap: 2rem;
+}
+
+.player-active {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+
+.dice-image {
+    width: 5rem;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.btn-control {
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */

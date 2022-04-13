@@ -1,0 +1,17 @@
+.margin {
+
+  &-top {
+
+    &-xxl {
+      margin-top: 10rem;
+    }
+
+    &-lg {
+      margin-top: 5rem;
+    }
+
+    &-md {
+      margin-top: 3rem;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use "./../abstracts" as abstracts;
+
+.btn {
+  background: abstracts.$background-light--opaque;
+  border-radius: abstracts.$border-radius;
+
+  &-control {
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+  }
+}

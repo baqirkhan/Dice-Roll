@@ -1,3 +1,63 @@
+@use "./../abstracts" as abstracts;
+
 .board {
-  background: rgba(255, 255, 255, 0.4);
+  background: abstracts.$background-board;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: abstracts.$border-radius;
+  text-align: center;
+  box-shadow: 0 3rem 5rem rgb(0 0 0 / 25%);
+  position: relative;
+
+  &__player {
+    width: 40rem;
+    padding: 5rem 0;
+
+
+    &__score {
+
+      &-overall {
+        font-size: 5rem;
+        font-weight: 500;
+        color: abstracts.$background-gradient-right;
+      }
+
+      &-box {
+        background: linear-gradient(to left, abstracts.$background-gradient-left 0%, abstracts.$background-gradient-right 100%);
+        display: inline-block;
+        color: abstracts.$font-light;
+        padding: 1rem 3.2rem;
+        border-radius: abstracts.$border-radius;
+        line-height: 1.2;
+      }
+
+      &-current {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &-controls {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 4rem 0;
+    align-items: center;
+
+    &__board-buttons {
+      display: flex;
+      flex-direction: column;
+      margin-top: auto;
+      gap: 2rem;
+    }
+  }
+}
+
+.player-active {
+  background: abstracts.$background-light;
+  border-radius: abstracts.$border-radius;
 }
