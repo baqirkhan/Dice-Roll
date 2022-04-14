@@ -1,17 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-
-.margin-top-xxl {
-    margin-top: 10rem;
-}
-
-.margin-top-lg {
-    margin-top: 5rem;
-}
-
-.margin-top-md {
-    margin-top: 3rem;
-}
-
 /* Box sizing rules */
 *,
 *::before,
@@ -87,6 +74,31 @@ select {
     }
 }
 
+.margin-top-xxl {
+    margin-top: 10rem;
+}
+
+.margin-top-lg {
+    margin-top: 5rem;
+}
+
+.margin-top-md {
+    margin-top: 3rem;
+}
+
+@keyframes in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 html {
     font-size: 62.5%;
 }
@@ -123,6 +135,7 @@ body {
 .board__player {
     width: 40rem;
     padding: 5rem 0;
+    transition: all 0.3s;
 }
 
 .board__player__score-overall {
@@ -168,18 +181,55 @@ body {
     border-radius: 10px;
 }
 
+.winner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
+    background: rgba(65, 128, 3, 0.95);
+    color: #ccc;
+    border-radius: 10px;
+    animation: in 0.3s;
+    cursor: pointer;
+}
+
+.winner-hidden {
+    display: none;
+}
+
 .dice-image {
     width: 5rem;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .btn {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
+    text-decoration: none;
 }
 
-.btn-control {
+.btn-control:link, .btn-control:visited {
     font-size: 1.8rem;
-    padding: 0.5rem 1rem;
+    color: #444;
+    padding: 0.7rem 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+}
+
+.btn-control:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.btn-control:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -4,35 +4,37 @@
     <meta charset="UTF-8">
     <title>Dice Roll</title>
     <link rel="stylesheet" href="styles/main.css">
+    <script defer src="js/app.js"></script>
 </head>
 <body>
 <main>
     <div class="board">
-        <div class="board__player ">
+        <div id="player-1-board" class="board__player player-active">
             <h2 class="heading-primary">Player 1</h2>
-            <p class="board__player__score-overall margin-top-md">23</p>
+            <p id="player-1-overall" class="board__player__score-overall margin-top-md">0</p>
             <div class="board__player__score-box margin-top-xxl">
                 <h3 class="heading-secondary">Current</h3>
-                <p class="board__player__score-current">0</p>
+                <p id="player-1-current" class="board__player__score-current">0</p>
             </div>
         </div>
-        <div class="board__player player-active">
+        <div id="player-2-board" class="board__player">
             <h2 class="heading-primary">Player 2</h2>
-            <p class="board__player__score-overall margin-top-md">3</p>
+            <p id="player-2-overall" class="board__player__score-overall margin-top-md">0</p>
             <div class="board__player__score-box margin-top-xxl">
                 <h3 class="heading-secondary">Current</h3>
-                <p class="board__player__score-current">10</p>
+                <p id="player-2-current" class="board__player__score-current">0</p>
             </div>
         </div>
 
         <div class="board-controls">
-            <img class="dice-image" src="images/dice-1.png" alt="dice-1">
+            <img class="dice-image" src="images/dice-2.png" alt="dice-1">
             <div class="board-controls__board-buttons">
                 <a href="#" class="btn btn-control">🔁 New game</a>
-                <a href="#" class="btn btn-control">🎲 Roll dice</a>
-                <a href="#" class="btn btn-control">✋ Hold</a>
+                <a href="#" id="roll-dice" class="btn btn-control">🎲 Roll dice</a>
+                <a href="#" id="hold-score" class="btn btn-control">✋ Hold</a>
             </div>
         </div>
+        <div class="winner winner-hidden">Player 1 wins</div>
     </div>
 </main>
 </body>

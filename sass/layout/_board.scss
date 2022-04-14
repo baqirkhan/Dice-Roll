@@ -12,7 +12,7 @@
   &__player {
     width: 40rem;
     padding: 5rem 0;
-
+    transition: all 0.3s;
 
     &__score {
 
@@ -60,4 +60,25 @@
 .player-active {
   background: abstracts.$background-light;
   border-radius: abstracts.$border-radius;
+}
+
+.winner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+  background: abstracts.$background-board-winner;
+  color: abstracts.$font-light;
+  border-radius: abstracts.$border-radius;
+  animation: in 0.3s;
+  cursor: pointer;
+
+  &-hidden {
+    display: none;
+  }
 }

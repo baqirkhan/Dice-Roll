@@ -1,3 +1,7 @@
+@use "../abstracts";
+
 .dice-image {
   width: 5rem;
+  border-radius: abstracts.$border-radius;
+  overflow: hidden;
 }
