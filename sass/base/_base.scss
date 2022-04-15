@@ -8,7 +8,12 @@ body {
   font-family: abstracts.$font-stack;
   background-image: linear-gradient(to left, abstracts.$background-gradient-left 0%, abstracts.$background-gradient-right 100%);
   height: 100vh;
+  padding: 2rem;
+}
+
+main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10rem;
 }

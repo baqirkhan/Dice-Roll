@@ -3,7 +3,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -17,37 +17,37 @@ figure,
 blockquote,
 dl,
 dd {
-    margin: 0;
+  margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role=list],
 ol[role=list] {
-    list-style: none;
+  list-style: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -55,181 +55,201 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
-
 .margin-top-xxl {
-    margin-top: 10rem;
+  margin-top: 10rem;
 }
-
 .margin-top-lg {
-    margin-top: 5rem;
+  margin-top: 5rem;
+}
+.margin-top-md {
+  margin-top: 3rem;
 }
 
-.margin-top-md {
-    margin-top: 3rem;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  animation: show 1s;
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes in {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-        visibility: hidden;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-        visibility: visible;
-    }
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
 }
-
+@keyframes show {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: Nunito, sans-serif;
-    background-image: linear-gradient(to left, rgb(0, 59, 251) 0%, rgb(0, 19, 116) 100%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-family: "Nunito, Open Sans";
+  background-image: linear-gradient(to left, rgb(0, 59, 251) 0%, rgb(0, 19, 116) 100%);
+  height: 100vh;
+  padding: 2rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
 }
 
 .heading-primary {
-    font-size: 4.8rem;
-    font-weight: 400;
+  font-size: 4.8rem;
+  font-weight: 400;
 }
-
 .heading-secondary {
-    font-size: 3.2rem;
-    font-weight: 300;
+  font-size: 3.2rem;
+  font-weight: 300;
 }
 
 .board {
-    background: #4f6bcc;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-    position: relative;
+  background: #4f6bcc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  position: relative;
 }
-
 .board__player {
-    width: 40rem;
-    padding: 5rem 0;
-    transition: all 0.3s;
+  width: 40rem;
+  padding: 5rem 0;
+  transition: all 0.3s;
 }
-
 .board__player__score-overall {
-    font-size: 5rem;
-    font-weight: 500;
-    color: rgb(0, 19, 116);
+  font-size: 5rem;
+  font-weight: 500;
+  color: rgb(0, 19, 116);
 }
-
 .board__player__score-box {
-    background: linear-gradient(to left, rgb(0, 59, 251) 0%, rgb(0, 19, 116) 100%);
-    display: inline-block;
-    color: #ccc;
-    padding: 1rem 3.2rem;
-    border-radius: 10px;
-    line-height: 1.2;
+  background: linear-gradient(to left, rgb(0, 59, 251) 0%, rgb(0, 19, 116) 100%);
+  display: inline-block;
+  color: #ccc;
+  padding: 1rem 3.2rem;
+  border-radius: 10px;
+  line-height: 1.2;
 }
-
 .board__player__score-current {
-    font-size: 4rem;
+  font-size: 4rem;
 }
-
 .board-controls {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 4rem 0;
-    align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 4rem 0;
+  align-items: center;
 }
-
 .board-controls__board-buttons {
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 2rem;
 }
 
 .player-active {
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
 }
 
 .winner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10rem;
-    background: rgba(65, 128, 3, 0.95);
-    color: #ccc;
-    border-radius: 10px;
-    animation: in 0.3s;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+  background: rgba(65, 128, 3, 0.95);
+  color: #ccc;
+  border-radius: 10px;
+  animation: in 0.3s;
+  cursor: pointer;
 }
-
 .winner-hidden {
-    display: none;
+  display: none;
 }
 
 .dice-image {
-    width: 5rem;
-    border-radius: 10px;
-    overflow: hidden;
+  width: 5rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.how-to {
+  text-align: right;
 }
 
 .btn {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    text-decoration: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  text-decoration: none;
 }
-
 .btn-control:link, .btn-control:visited {
-    font-size: 1.8rem;
-    color: #444;
-    padding: 0.7rem 1rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
-    transition: all 0.3s;
+  font-size: 1.8rem;
+  color: #444;
+  padding: 0.7rem 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  transition: all 0.3s;
 }
-
 .btn-control:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
 }
-
 .btn-control:active {
-    transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 /*# sourceMappingURL=main.css.map */
