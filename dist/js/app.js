@@ -48,7 +48,7 @@ const checkIfWon = (diceValue) => {
     winnerOverlay.textContent = `Player ${3 - playerActive} Won!!`;
     winnerOverlay.classList.remove("winner-hidden");
     return true;
-  } else if (players[playerActive].current > 30) {
+  } else if (players[playerActive].overall > 30) {
     winnerOverlay.textContent = `Player ${playerActive} Won!!`;
     winnerOverlay.classList.remove("winner-hidden");
     return true;
