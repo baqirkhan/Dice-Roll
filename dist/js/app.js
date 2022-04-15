@@ -39,6 +39,8 @@ const startNewGame = () => {
     overall: 0,
   };
   playerActive = 1;
+  playerOneBoard.classList.add("player-active");
+  playerTwoBoard.classList.remove("player-active");
 };
 
 const checkIfWon = (diceValue) => {
@@ -46,7 +48,7 @@ const checkIfWon = (diceValue) => {
     winnerOverlay.textContent = `Player ${3 - playerActive} Won!!`;
     winnerOverlay.classList.remove("winner-hidden");
     return true;
-  } else if (players[playerActive].current > 330) {
+  } else if (players[playerActive].current > 30) {
     winnerOverlay.textContent = `Player ${playerActive} Won!!`;
     winnerOverlay.classList.remove("winner-hidden");
     return true;
@@ -65,10 +67,10 @@ winnerOverlay.addEventListener("click", () =>
   winnerOverlay.classList.add("winner-hidden")
 );
 
-overlay.addEventListener("click", () => overlay.classList.add("hidden"));
+overlay.addEventListener("click", () => overlay.classList.remove("show"));
 
 howTo.addEventListener("click", () => {
-  overlay.classList.remove("hidden");
+  overlay.classList.add("show");
 });
 
 newGame.addEventListener("click", () => {
